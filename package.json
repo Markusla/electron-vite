@@ -7,7 +7,7 @@
 	"scripts": {
 		"dev": "vite",
 		"build": "vite build",
-		"dist": "electron-builder",
+		"dist:win": "electron-builder --win",
 		"preview": "vite preview"
 	},
 	"dependencies": {

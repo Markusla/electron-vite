@@ -1,0 +1,22 @@
+{
+	"appId": "YourAppID",
+	"asar": false,
+	"directories": {
+		"output": "release/${version}"
+	},
+	"files": ["dist", "dist-electron"],
+	"mac": {
+		"artifactName": "${productName}_${version}.${ext}",
+		"target": ["dmg"]
+	},
+	"win": {
+		"target": ["portable"],
+		"artifactName": "${productName}_${version}.${ext}"
+	},
+	"nsis": {
+		"oneClick": false,
+		"perMachine": false,
+		"allowToChangeInstallationDirectory": true,
+		"deleteAppDataOnUninstall": false
+	}
+}

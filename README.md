@@ -21,5 +21,5 @@ docker run --rm -ti \
 ```
 
 ```bash
-npm i && npm run build && npm run dist -- --win portable
+npm i && npm run build && npm run dist:win
 ```
