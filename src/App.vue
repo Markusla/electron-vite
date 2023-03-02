@@ -1,12 +1,21 @@
 <script setup>
 import HelloWorld from "./components/HelloWorld.vue";
+
+const chromeVersion = versions.chrome();
+const darkModeToggle = () => darkMode.toggle();
+const darkModeSystem = () => darkMode.system();
+const quit = () => electronApp.quit();
 </script>
 
 <template>
 	<div>
+		<button @click="quit()">Close</button>
+		<button @click="darkModeToggle()">Toggle Dark Mode</button>
+		<button @click="darkModeSystem()">Reset to System Theme</button>
 		<a href="https://vuejs.org/" target="_blank">
 			<img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
 		</a>
+		<div>{{ chromeVersion }}</div>
 	</div>
 	<HelloWorld msg="Vite + Vue" />
 </template>

@@ -6,8 +6,13 @@ import electron from "vite-plugin-electron";
 export default defineConfig({
 	plugins: [
 		vue(),
-		electron({
-			entry: "electron/main.cjs",
-		}),
+		electron(
+			{
+				entry: "electron/main.cjs",
+			},
+			{
+				entry: "electron/preload.js",
+			}
+		),
 	],
 });
